@@ -1,0 +1,40 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --content-base=./public --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+      "babel-plugin-transform-class-properties": "^6.24.1",
+      "babel-plugin-transform-object-rest-spread": "^6.23.0",
+      "babel-preset-env": "^1.5.2",
+      "babel-preset-react": "^6.24.1",
+      "cross-env": "^3.2.3",
+      "css-loader": "^0.28.4",
+      "file-loader": "^0.11.2",
+      "font-awesome": "^4.7.0",
+      "laravel-mix": "^1.0.7",
+      "lodash": "^4.17.4",
+      "moment": "^2.18.1",
+      "react": "^15.6.1",
+      "react-addons-css-transition-group": "^15.6.0",
+      "react-addons-transition-group": "^15.6.0",
+      "react-dom": "^15.6.1",
+      "react-dropzone": "^3.13.3",
+      "react-redux": "^5.0.0",
+      "react-router": "3.x",
+      "react-router-redux": "^4.0.8",
+      "reactstrap": "^4.6.2",
+      "redux": "^3.0.0",
+      "redux-form": "^6.8.0",
+      "redux-module-builder": "^0.3.2",
+      "redux-thunk": "^2.2.0",
+      "sass-loader": "^6.0.6",
+      "url-loader": "^0.5.9"
+    }
+}
