@@ -1,4 +1,5 @@
 import modules from '../modules'
+import React from 'react'
 import thunkMiddleware from 'redux-thunk'
 import { createStore, compose, applyMiddleware } from 'redux'
 import { createApiMiddleware } from 'redux-module-builder/api'
@@ -34,12 +35,9 @@ export default (historyType, composer, request) => {
     )(createStore)
     const store = composeStore(reducers, initialState)
 
-    const actions = bindActionCreatorsToStore(actions, store)
     return {
         history: syncHistoryWithStore(history, store),
         store,
-        withActions(Component, props) {
-          return <Component {...props} actions={actions} />
-        }
+        actions
     }
 }

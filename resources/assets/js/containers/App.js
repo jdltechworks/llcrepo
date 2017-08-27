@@ -5,7 +5,6 @@ import omit from 'lodash/omit'
 
 class App extends Component {
     componentDidMount() {
-        actions.Auth.check()
     }
     render() {
         const { props } = this
@@ -13,7 +12,7 @@ class App extends Component {
         return(
             <div className="app-container">
                 {Children.map(this.props.children, (child) => {
-                    return cloneElement(child, { ...noform, actions })
+                    return cloneElement(child, { ...noform })
                 })}
             </div>
         )

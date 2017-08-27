@@ -44,7 +44,6 @@ const bundled = processModules(modules, {
     initialReducers
 })
 
-
 const reducers = combineReducers(bundled.reducers)
 
 /**

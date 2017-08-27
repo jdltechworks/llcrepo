@@ -5,7 +5,6 @@ import isEmpty from 'lodash/isEmpty'
 import includes from 'lodash/includes'
 import { push } from 'react-router-redux'
 
-const { RequestHeaders } = window.Laravel
 
 export const types = createConstants('auth')(
     'LOGIN',
@@ -33,7 +32,7 @@ export const actions = {
             if(!isEmpty(curr_user)) {
                 dispatch({
                     type: types.IS_AUTHENITCATED,
-                    session: JSON.parse(atob(curr_user))
+                    session: {}
                 })
             } else {
                 const { Auth } = getState()
@@ -57,7 +56,7 @@ export const actions = {
             if(!isEmpty(curr_user)) {
                 dispatch({
                     type: types.IS_AUTHENITCATED,
-                    session: JSON.parse(atob(curr_user))
+                    session: {}
                 })
 
             } else {
@@ -87,7 +86,6 @@ export const actions = {
             return fetch('/register', {
                 method: 'POST',
                 credentials: 'same-origin',
-                headers: RequestHeaders,
                 body
             }).then((res) => res.json())
             .then((session) => {
@@ -113,7 +111,6 @@ export const actions = {
             return fetch('/login', {
                 method: 'POST',
                 credentials: "same-origin",
-                headers: RequestHeaders,
                 body
             }).then((res) => {
                 return res.json()
@@ -127,12 +124,11 @@ export const actions = {
         return (dispatch, getState) => {
             //send a fetch api here
             const body = new FormData()
-            body.append('_token', window.Laravel.csrfToken)
+            body.append('_token', '')
 
             return fetch('/logout', {
                 method: 'POST',
                 credentials: "same-origin",
-                headers: RequestHeaders,
                 body
             }).then((res) => {
                 return res.json()

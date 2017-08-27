@@ -20,12 +20,10 @@ const validate = (values) => {
 
 class Login extends Component {
   componentDidMount() {
-    this.props.actions.Auth.check()
   }
   submitForm(values) {
     const { actions } = this.props
     let { email, password } = values
-    actions.Auth.login(email, password)
   }
   render() {
     let { handleSubmit } = this.props
@@ -44,7 +42,7 @@ class Login extends Component {
 
                   {_.map(LOGIN, renderField.bind(this))}
                   <div className="form-group text-right">
-                    <small>New to AWPI? <Link to="/register">Sign-up</Link></small>
+                    <small>New to LLCSolutions? <Link to="/register">Sign-up</Link></small>
                     <button className="btn btn-info">Sign-in</button>
                   </div>
                   </div>
