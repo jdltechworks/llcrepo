@@ -22,7 +22,6 @@ class Register extends Component {
   }
   submitForm(values) {
     const { actions } = this.props
-    actions.Auth.signup(values)
   }
   render() {
     let { handleSubmit } = this.props

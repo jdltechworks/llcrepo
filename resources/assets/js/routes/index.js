@@ -4,6 +4,7 @@ import App from '../containers/App'
 import Home from '../containers/Home'
 import Login from '../containers/Login'
 import Register from '../containers/Register'
+
 const routes = (
     <Route path="/" component={App}>
         <IndexRoute component={Home} />

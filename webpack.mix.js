@@ -12,10 +12,7 @@ const { mix } = require('laravel-mix');
  */
 
  mix.webpackConfig({
-   output: {
-     libraryTarget: 'var',
-     library: 'app'
-   }
+     devtool: 'source-map'
  });
 
 mix.react('resources/assets/js/app.js', 'public/js')
