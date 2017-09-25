@@ -1,9 +1,8 @@
 import _ from 'lodash'
 import { reduxForm } from 'redux-form'
-import { REGISTER } from '../models/Register'
-import { renderField } from '../helpers'
+import { REGISTER } from '../components/Forms/models/Register'
 import React, { Component, PropTypes } from 'react'
-
+import { renderField } from '../components/Forms/helpers'
 
 const validate = (values) => {
   const errors = {};

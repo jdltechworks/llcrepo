@@ -10,16 +10,15 @@ import { Field } from 'redux-form'
  * @return {react component}             return an html that is generated from react
  */
 export const renderField = function(fieldConfig, field) {
-
   if(_.includes(['textarea', 'selectbox'], fieldConfig.tag)) {
-    return ( 
+    return (
       <Field key={field} name={field} component={(_field) => {
         let { meta, input } = _field
         return (
-        <div  className="form-group">
-          <fieldConfig.tag {...input} className="form-control" placeholder={fieldConfig.label} />
-          {meta.touched && meta.error ? <small>{meta.error}</small> : null}
-        </div>
+            <div  className="form-group">
+              <fieldConfig.tag {...input} className="form-control" placeholder={fieldConfig.label} />
+              {meta.touched && meta.error ? <small>{meta.error}</small> : null}
+            </div>
         )
       }} />
     )
@@ -31,7 +30,7 @@ export const renderField = function(fieldConfig, field) {
       <Field key={field} name={field} component={(_field) => {
         let { meta, input } = _field
         return (<div className="form-group">
-        <Dropzone name={field} multiple={true} onDrop={(file, e) => { 
+        <Dropzone name={field} multiple={true} onDrop={(file, e) => {
           input.onChange('file')
           uploadImage(file)
         }} />
@@ -57,5 +56,5 @@ export const TextField = function(_field) {
 }
 
 export const TextArea = (_field) => {
-  
+
 }

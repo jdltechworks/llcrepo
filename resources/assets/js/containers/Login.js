@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import { reduxForm } from 'redux-form'
-import { LOGIN } from '../models/Login'
-import { renderField } from '../helpers'
+import { LOGIN } from '../components/Forms/models/Login'
+import { renderField } from '../components/Forms/helpers'
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 

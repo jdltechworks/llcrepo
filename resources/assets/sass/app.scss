@@ -1,4 +1,7 @@
-@import "~spectre.css/src/spectre-exp.scss";
-@import "~spectre.css/src/spectre-icons.scss";
-@import "~spectre.css/src/spectre.scss";
+@import "~spectre.css/src/spectre-icons";
+@import "~spectre.css/src/spectre";
+@import "~spectre.css/src/spectre-exp";
 @import "theme/variables";
+@import "components/jumbotron";
+@import "components/menu";
+@import "components/services";

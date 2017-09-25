@@ -1,0 +1,21 @@
+//do something @ 829
+.navbar {
+    margin: 0;
+    &-brand {
+        height: auto;
+    }
+    &-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            padding: 0;
+            margin: 0;
+            a {
+                padding: 25px 10px;
+                display: block;
+            }
+        }
+    }
+}

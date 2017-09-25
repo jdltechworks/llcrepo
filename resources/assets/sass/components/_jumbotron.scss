@@ -1,0 +1,23 @@
+.jumbotron {
+    position: relative;
+    color: #fff;
+    padding: 0;
+    &-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 50%;
+        .button {
+            color: #fff;
+            padding: 10px 25px;
+            font-size: 25px;
+            border: 1px solid #fff;
+            display: inline-table;
+            position: relative;
+        }
+    }
+}
