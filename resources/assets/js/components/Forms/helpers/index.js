@@ -16,7 +16,7 @@ export const renderField = function(fieldConfig, field) {
         let { meta, input } = _field
         return (
             <div  className="form-group">
-              <fieldConfig.tag {...input} className="form-control" placeholder={fieldConfig.label} />
+              <fieldConfig.tag {...input} className="form-input" placeholder={fieldConfig.label} />
               {meta.touched && meta.error ? <small>{meta.error}</small> : null}
             </div>
         )
@@ -49,7 +49,7 @@ export const TextField = function(_field) {
   let { meta, input, label, type } = _field
   return (
     <div  className="form-group">
-      <input {...input} type={type} className="form-control" placeholder={label}/>
+      <input {...input} type={type} className="form-input" placeholder={label}/>
       {meta.touched && meta.error ? <small>{meta.error}</small> : null}
     </div>
   )

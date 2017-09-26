@@ -9,7 +9,6 @@ export const CONTACT = {
         type: 'email',
         label: 'email'
     },
-
     message: {
         tag:'textarea',
         type:'textarea',

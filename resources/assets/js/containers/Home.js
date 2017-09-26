@@ -6,6 +6,7 @@ import About from '../components/Section/About'
 import Services from '../components/Section/Services'
 import ContactForm  from '../components/Forms/Contact'
 import { validator } from '../components/Forms/helpers/Validator'
+import Footer from '../components/Section/Footer'
 const DecoratedForm = reduxForm({
     form: 'contact-form',
     validate: validator(CONTACT)
@@ -19,6 +20,7 @@ export default class Home extends Component {
                 <About />
                 <Services />
                 <DecoratedForm />
+                <Footer />
             </div>
         )
     }
