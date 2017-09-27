@@ -15,6 +15,7 @@ class ContactForm extends Component {
     }
     submitForm(values) {
       const { actions } = this.props
+      console.log(values)
     }
     render() {
       let { handleSubmit } = this.props
@@ -26,10 +27,15 @@ class ContactForm extends Component {
                         {map(primary, renderField.bind(this))}
                     </div>
                     <div className="column col-6">
+                        {map(secondary, renderField.bind(this))}
+                    </div>
+                </div>
+                <div className="columns">
+                    <div className="column col-6">
+
+                    </div>
+                    <div className="column col-6">
                         <div className="columns">
-                            <div className="column col-12">
-                                {map(secondary, renderField.bind(this))}
-                            </div>
                             <div className="column col-6">
                                 <button className="btn btn-primary btn-block">SEND MESSAGE</button>
                             </div>
@@ -39,7 +45,6 @@ class ContactForm extends Component {
                         </div>
                     </div>
                 </div>
-
             </section>
         </form>
       )

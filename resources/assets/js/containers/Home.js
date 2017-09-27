@@ -7,6 +7,7 @@ import Services from '../components/Section/Services'
 import ContactForm  from '../components/Forms/Contact'
 import { validator } from '../components/Forms/helpers/Validator'
 import Footer from '../components/Section/Footer'
+
 const DecoratedForm = reduxForm({
     form: 'contact-form',
     validate: validator(CONTACT)

@@ -4,18 +4,7 @@ import { LOGIN } from '../components/Forms/models/Login'
 import { renderField } from '../components/Forms/helpers'
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-
-
-const validate = (values) => {
-  const errors = {};
-  _.each(LOGIN, (type, field) => {
-    if(!values[field]) {
-      errors[field] = `${field} is blank`
-    }
-  });
-
-  return errors;
-}
+import { validator } from '../components/Forms/helpers/Validator'
 
 
 class Login extends Component {
@@ -24,6 +13,7 @@ class Login extends Component {
   submitForm(values) {
     const { actions } = this.props
     let { email, password } = values
+    console.log(values)
   }
   render() {
     let { handleSubmit } = this.props
@@ -59,5 +49,5 @@ class Login extends Component {
 
 export default reduxForm({
     form:'login',
-    validate
+    validate: validator(LOGIN)
 })(Login)

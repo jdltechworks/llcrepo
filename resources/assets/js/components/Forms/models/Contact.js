@@ -12,6 +12,7 @@ export const CONTACT = {
     message: {
         tag:'textarea',
         type:'textarea',
-        label:'message'
+        label:'message',
+        rows: 3
     }
 }
