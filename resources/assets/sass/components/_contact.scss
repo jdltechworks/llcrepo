@@ -1,0 +1,12 @@
+.contact {
+    h2 {
+        color: #fff;
+        margin-bottom: 0;
+        &:after {
+            background: #2C2C2A;
+        }
+    }
+    &-form {
+        padding-top: 7%;
+    }
+}

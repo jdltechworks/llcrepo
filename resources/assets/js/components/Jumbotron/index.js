@@ -9,7 +9,9 @@ class Jumbotron extends Component {
                     <h1>Great Solutions. <br /> Proud Products.</h1>
                     <br />
                     <p>Nam purus augue, bibendum quis magna id, sollicitudin prottitor ex.</p>
-                    <a href="#" className="button">CONTACT US KNOW <i className="icon icon-arrow-right" /></a>
+                    <a href="#" className="btn btn-lg btn-transparent">
+                        <span>CONTACT US KNOW <i className="icon icon-arrow-right" /></span>
+                    </a>
                 </div>
             </div>
         )

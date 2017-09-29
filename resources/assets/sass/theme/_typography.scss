@@ -1,0 +1,63 @@
+@mixin font-face($style-name, $file, $family, $category: "") {
+  $filepath: "/fonts/" + $family + "/" + $file;
+
+  @font-face {
+    font-family: #{$style-name};
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format("embedded-opentype"), url($filepath + ".woff") format("woff"), url($filepath + ".ttf") format("truetype"), url($filepath + ".svg#" + $style-name + "") format("svg");
+  }
+
+  %#{$style-name} {
+    font: {
+      @if $category != "" {
+        family: #{$style-name}, #{$category};
+      }
+      @else {
+        family: #{$style-name};
+        weight: normal;
+      }
+    };
+  }
+}
+
+@mixin font-face-v2($style-name, $file, $family, $category: "") {
+  $filepath: "/fonts/" + $family + "/" + $file;
+
+  @font-face {
+    font-family: #{$style-name};
+    src: url($filepath + ".eot");
+    src: url($filepath + ".woff") format("woff"), url($filepath + ".woff2") format("woff2");
+  }
+
+  %#{$style-name} {
+    font: {
+      @if $category != "" {
+        family: #{$style-name}, #{$category};
+      }
+      @else {
+        family: #{$style-name};
+        weight: normal;
+      }
+    };
+  }
+}
+
+@include font-face(OpenSans, OpenSans-Regular-webfont, Open_Sans)
+
+@include font-face-v2(Montserrat, montserrat-regular-webfont, Montserrat)
+
+@include font-face-v2(MontserratBold, montserrat-bold-webfont, Montserrat)
+
+@include font-face-v2(MontserratBlack, montserrat-black-webfont, Montserrat)
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: MontserratBold;
+}
+
+a {
+    font-family: Montserrat;
+}
+
+p {
+    font-family: OpenSans;
+}

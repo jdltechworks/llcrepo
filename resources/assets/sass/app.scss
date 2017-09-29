@@ -1,7 +1,14 @@
-@import "~spectre.css/src/spectre-icons";
-@import "~spectre.css/src/spectre";
-@import "~spectre.css/src/spectre-exp";
+$fa-font-path: '/fonts/font-awesome';
+
+@import "~font-awesome/scss/font-awesome";
 @import "theme/variables";
+@import "theme/spectre-icons";
+@import "theme/spectre";
+@import "theme/spectre-exp";
+@import "theme/typography";
+@import "components/constants";
 @import "components/jumbotron";
 @import "components/menu";
+@import "components/section";
 @import "components/services";
+@import "components/contact";

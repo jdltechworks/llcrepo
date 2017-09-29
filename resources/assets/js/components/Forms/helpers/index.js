@@ -22,15 +22,19 @@ export const renderField = function(fieldConfig, field) {
     )
 }
 
+const textAreaConfig = (type) => {
+    if(type == 'textarea') return ''
+    return 'input-lg'
+}
 
 export const FieldSetter = function(_field) {
 
-  let { meta, input, label, config, type } = _field
-  const { rows } = config
-
+  let { meta, input, label, config } = _field
+  const { rows, type } = config
+  const setClass = textAreaConfig(type)
   return (
     <div  className="form-group">
-      <config.tag {...input} rows={rows} type={type} className="form-input" placeholder={label} />
+      <config.tag {...input} rows={rows} type={type} className={`form-input ${setClass}`} placeholder={label} />
       {meta.touched && meta.error ? <small>{meta.error}</small> : null}
     </div>
   )

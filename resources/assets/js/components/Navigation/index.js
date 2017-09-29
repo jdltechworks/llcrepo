@@ -12,8 +12,8 @@ export default class Navigation extends Component {
                   </section>
                   <section className="navbar-section">
                       <ul className="navbar-menu">
-                        <li className="navbar-menu-item active">
-                          <a href="#" className="active">HOME</a>
+                        <li className="navbar-menu-item">
+                          <a href="#">HOME</a>
                         </li>
                         <li className="navbar-menu-item">
                           <a href="#">WHO WE ARE</a>

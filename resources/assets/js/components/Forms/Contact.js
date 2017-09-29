@@ -20,33 +20,36 @@ class ContactForm extends Component {
     render() {
       let { handleSubmit } = this.props
       return (
-        <form onSubmit={handleSubmit((props) => {this.submitForm(props)})}>
-            <section className="contact container grid-lg" style={{ paddingTop: '10%' }}>
-                <div className="columns">
-                    <div className="column col-6">
-                        {map(primary, renderField.bind(this))}
+        <div id="contact" className="section container contact">
+            <h2 className="text-center">CONTACT US</h2>
+            <form onSubmit={handleSubmit((props) => {this.submitForm(props)})}>
+                <section className="container grid-lg contact-form">
+                    <div className="columns">
+                        <div className="column col-6">
+                            {map(primary, renderField.bind(this))}
+                        </div>
+                        <div className="column col-6">
+                            {map(secondary, renderField.bind(this))}
+                        </div>
                     </div>
-                    <div className="column col-6">
-                        {map(secondary, renderField.bind(this))}
-                    </div>
-                </div>
-                <div className="columns">
-                    <div className="column col-6">
+                    <div className="columns">
+                        <div className="column col-6">
 
-                    </div>
-                    <div className="column col-6">
-                        <div className="columns">
-                            <div className="column col-6">
-                                <button className="btn btn-primary btn-block">SEND MESSAGE</button>
-                            </div>
-                            <div className="column col-6">
-                                <button className="btn btn-primary btn-block">SCHEDULE A MEETING</button>
+                        </div>
+                        <div className="column col-6">
+                            <div className="columns">
+                                <div className="column col-6">
+                                    <button className="btn btn-primary btn-block btn-lg">SEND MESSAGE</button>
+                                </div>
+                                <div className="column col-6">
+                                    <button className="btn btn-primary btn-block btn-lg">SCHEDULE A MEETING</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </form>
+                </section>
+            </form>
+        </div>
       )
   }
 }

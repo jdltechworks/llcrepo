@@ -3,13 +3,18 @@ import React, { Component } from 'react'
 class Services extends Component {
     render() {
         return(
-            <div id="services" className="container">
-                <h2>Services</h2>
-                <img src="/images/mockup.png" className="img-responsive" />
+            <div id="services" className="services section container">
+                <div className="services-icon">
+                    <i className="fa fa-cog"></i>
+                </div>
+                <h2 className="text-center">Services</h2>
+                <div className="container grid-lg">
+                    <img src="/images/mockup.png" className="img-responsive" />
+                </div>
                 <div className="container grid-lg services-content">
                     <div className="columns">
                         <div className="column col-3">
-                            <img src="/images/icon_consultancy.png" />
+                            <img className="img-responsive" src="/images/icon_consultancy.png" />
                         </div>
                         <div className="column col-9">
                             <h2>Consultancy</h2>
@@ -30,7 +35,7 @@ class Services extends Component {
                                 <a href="#">VIEW SAMPLES</a>
                         </div>
                         <div className="column col-3">
-                            <img src="/images/icon_development.png" />
+                            <img className="img-responsive" src="/images/icon_development.png" />
                         </div>
                     </div>
                     <div className="columns">
@@ -49,7 +54,7 @@ class Services extends Component {
                     </div>
                     <div className="columns">
                         <div className="column col-3">
-                            <img src="/images/icon_graphics.png" />
+                            <img className="img-responsive" src="/images/icon_graphics.png" />
                         </div>
                         <div className="column col-9">
                             <h2>Web/Product Design / Branding</h2>
@@ -63,7 +68,7 @@ class Services extends Component {
                     <div className="columns">
                         <div className="column col-12">
                             <h2>{`What do you want to create? And how do we do it?`}</h2>
-                            <img src="/images/steps.png" className="img-response" />
+                            <img className="img-responsive" src="/images/steps.png" />
                         </div>
                     </div>
                 </div>

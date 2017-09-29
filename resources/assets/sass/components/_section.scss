@@ -1,0 +1,36 @@
+.section {
+    content: "";
+    clear: both;
+    display: table;
+    padding-bottom: 10%;
+    > h2{
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: normal;
+        margin: 140px;
+        position: relative;
+        padding-bottom: 1.5em;
+        &:before {
+            content: "";
+            width: 125px;
+            height: 3px;
+            background: $primary-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        &:after {
+            content: "";
+            width: 5px;
+            height: 3px;
+            background: #fff;
+            position: absolute;
+            left: 3%;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}

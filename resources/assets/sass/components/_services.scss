@@ -1,3 +1,63 @@
 #services {
-    background: url("/images/bg_services.jpg") no-repeat scroll center bottom;
+    background: url("/images/bg_services.jpg") no-repeat scroll center top #F7F7F7;
+    position: relative;
+    &:before {
+        content: "";
+        top: -2%;
+        background: #f7f7f7;
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        -ms-transform: skewY(2deg);
+        -webkit-transform: skewY(2deg);
+        transform: skewY(2deg);
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+}
+
+.services {
+    padding-bottom: 5%;
+    h2 {
+        &:after {
+            background: #f7f7f7;
+        }
+    }
+    &-icon {
+        &:before {
+            content: "";
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+        }
+        position: absolute;
+        top: -3%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $primary-color;
+        color: #fff;
+        padding: 8px;
+        i {
+            font-size: 35px;
+        }
+    }
+    &-content {
+        background: #fff;
+        padding: 8% 5% 5%;
+    }
 }

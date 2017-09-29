@@ -1,7 +1,7 @@
 // Core variables
 // Colors
 // Core colors
-$primary-color: #5764c6 !default;
+$primary-color: #8AC43E !default;
 $primary-color-dark: darken($primary-color, 3%) !default;
 $primary-color-light: lighten($primary-color, 3%) !default;
 $secondary-color: lighten($primary-color, 40%) !default;
@@ -12,7 +12,7 @@ $link-color: $primary-color !default;
 $link-color-dark: darken($link-color, 5%) !default;
 
 // Gray colors
-$dark-color: #454d5d !default;
+$dark-color: #272725 !default;
 $light-color: #fff !default;
 $gray-color: lighten($dark-color, 40%) !default;
 $gray-color-dark: darken($gray-color, 20%) !default;

@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+    &:hover, &:active, &:visited, a:focus, a:link {
+        text-decoration: none;
+    }
+    &:-webkit-any-link{
+        text-decoration:none;
+    }
+}
+
+
+footer {
+    background: url("/images/bg_contact-us.jpg") no-repeat scroll center top;
+}
