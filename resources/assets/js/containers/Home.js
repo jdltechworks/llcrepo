@@ -13,7 +13,6 @@ export default class Home extends Component {
                 <Jumbotron />
                 <About />
                 <Services />
-
                 <Footer />
             </div>
         )

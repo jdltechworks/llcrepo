@@ -58,6 +58,78 @@
     }
     &-content {
         background: #fff;
-        padding: 8% 5% 5%;
+        padding: 8% 2.5% 5%;
+    }
+    &-details {
+        margin-bottom: 7em;
+        h2 {
+            color: $primary-color;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        p {
+            margin-bottom: 2.5em;
+            line-height: 1.7;
+        }
+        .btn {
+            padding: 10px 35px;
+        }
+        &.odd {
+            .content {
+                padding-left: 4.5em;
+            }
+        }
+        &.even {
+            .content {
+                padding-right: 4.5em;
+            }
+        }
+        &-list {
+            margin-bottom: 7em;
+            h2 {
+                font-size: 20px;
+                margin-bottom: 3em;
+            }
+            ul {
+                list-style: none;
+                li {
+                    display: inline-table;
+                    margin: 0;
+                    padding: 2% 0 2% 3%;
+                    width: 295px;
+                    letter-spacing: 1px;
+                    position: relative;
+                    line-height: 1;
+                    &:before {
+                        content: "";
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        border: 1px solid $primary-color;
+
+                    }
+                    &:after {
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        margin: .1213rem;
+                        border: 1px solid $dark-color;
+
+                    }
+                }
+            }
+        }
+        &-last {
+            h2 {
+                font-size: 20px;
+                margin-bottom: 3em;
+            }
+        }
     }
 }

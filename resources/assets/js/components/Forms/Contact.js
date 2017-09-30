@@ -24,7 +24,7 @@ class ContactForm extends Component {
             <h2 className="text-center">CONTACT US</h2>
             <form onSubmit={handleSubmit((props) => {this.submitForm(props)})}>
                 <section className="container grid-lg contact-form">
-                    <div className="columns">
+                    <div className="columns contact-form-fields">
                         <div className="column col-6">
                             {map(primary, renderField.bind(this))}
                         </div>

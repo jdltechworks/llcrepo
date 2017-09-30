@@ -20,8 +20,18 @@ class About extends Component {
                             the first to say that we're and it'll be not for everyone. We can't help you get more subscribers on Youtube,
                              but that's okay, we could still help you and refer some of legit connections we have. So let us know.`}
                     </p>
-                    <a href="#" className="btn btn-primary btn-lg">CONTACT US</a>
-                    <a href="#" className="btn btn-lg">LEARN MORE</a>
+                    <div className="columns">
+                        <div className="column col-6 col-mr-auto">
+                            <div className="columns">
+                                <div className="column col-6">
+                                    <a href="#" className="btn btn-primary btn-block btn-lg">CONTACT US</a>
+                                </div>
+                                <div className="column col-6">
+                                    <a href="$" className="btn btn-block btn-lg">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                     <div className="column col-4">
                         <img src="/images/icon_who-we-are.png" />

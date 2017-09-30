@@ -1,0 +1,36 @@
+.footer {
+    color: #fff;
+    .copyright {
+        padding-top: 10px;
+        &-text {
+            color: $primary-color;
+        }
+    }
+    span {
+        font-size: 13px;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+    &-social {
+        &-icons {
+
+        }
+    }
+    .social {
+        li {
+            display: inline-block;
+            margin: 0 5px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                font-size: 30px;
+            }
+        }
+    }
+}

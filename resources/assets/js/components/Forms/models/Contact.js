@@ -2,17 +2,17 @@ export const CONTACT = {
     name: {
         tag: 'input',
         type: 'text',
-        label: 'name'
+        label: 'Name *'
     },
     email: {
         tag: 'input',
         type: 'email',
-        label: 'email'
+        label: 'Email address *'
     },
     message: {
         tag:'textarea',
         type:'textarea',
-        label:'message',
+        label:'Your message *',
         rows: 4
     }
 }

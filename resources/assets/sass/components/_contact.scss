@@ -8,5 +8,13 @@
     }
     &-form {
         padding-top: 7%;
+        &-fields {
+            margin-bottom: 2em;
+            &.form-input {
+                &.input-lg {
+                    font-size: 0.64rem;
+                }
+            }
+        }
     }
 }
