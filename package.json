@@ -37,5 +37,8 @@
         "sass-loader": "^6.0.6",
         "spectre.css": "^0.4.1",
         "url-loader": "^0.5.9"
+    },
+    "dependencies": {
+        "jump.js": "^1.0.2"
     }
 }

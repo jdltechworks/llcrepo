@@ -16,10 +16,18 @@
                 padding: 25px 10px;
                 display: block;
                 color: $dark-color;
-                &:hover, &:active, & {
+                &:hover, &:active, &:focus {
                     color: $primary-color;
                 }
             }
         }
     }
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
 }
