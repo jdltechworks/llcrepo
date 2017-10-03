@@ -13,11 +13,40 @@
             padding: 0;
             margin: 0;
             a {
+                position: relative;
                 padding: 25px 10px;
                 display: block;
                 color: $dark-color;
                 &:hover, &:active, &:focus {
                     color: $primary-color;
+                    z-index: 1;
+                    &:after {
+                        width: 60%;
+                        opacity: 1;
+                        z-index: -10;
+                        animation: fill .5s forwards;
+                        opacity: 1;
+                    }
+                }
+
+                &:after {
+                    transition: all .5s;
+                    position: absolute;
+                    border-radius: 10px;
+                    bottom: 20%;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 0%;
+                    content: ".";
+                    color: transparent;
+                    background: $primary-color;
+                    height: 3px;
+                }
+            }
+            &:last-child {
+                a {
+                    margin: 15px 0 15px 20px;
                 }
             }
         }

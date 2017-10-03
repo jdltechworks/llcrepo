@@ -2,6 +2,9 @@
     position: relative;
     color: #fff;
     padding: 0;
+    img {
+        margin: auto;
+    }
     &-content {
         h1 {
             font-size: 60px;

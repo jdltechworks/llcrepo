@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import map from 'lodash/map'
 import jump from 'jump.js'
-const menuSettings = [
-    { name: 'HOME', href: 'jumbotron' },
+
+export const menuSettings = [
+    { name: 'HOME', href: 'app' },
     { name: 'WHO WE ARE', href: 'about' },
-    {name: 'SERVICES', href: 'services' }
+    { name: 'SERVICES', href: 'services' },
+    { name: 'CONTACT', href: 'contact' }
 ]
 
 export default class Navigation extends Component {
@@ -31,7 +33,7 @@ export default class Navigation extends Component {
                                   </li>
                               )}
                               <li className="navbar-menu-item">
-                                <a href="#">SCHEDULE A MEETING</a>
+                                <a className="btn btn-primary btn-lg" href="#">SCHEDULE A MEETING</a>
                               </li>
                           </ul>
 
