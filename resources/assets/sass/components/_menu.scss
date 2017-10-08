@@ -17,7 +17,7 @@
                 padding: 25px 10px;
                 display: block;
                 color: $dark-color;
-                &:hover, &:active, &:focus {
+                &:hover, &:active, &:focus, &.active {
                     color: $primary-color;
                     z-index: 1;
                     &:after {

@@ -4,11 +4,12 @@ import map from 'lodash/map'
 import jump from 'jump.js'
 
 export default class StickyNavigation extends Component {
-    scroller(e) {
+    scroller(name, e) {
         e.preventDefault()
         jump(e.currentTarget.attributes.href.value)
     }
     render() {
+        const { menu } = this.props
         return(
             <div className="sticky-nav">
                 <ul>
@@ -16,8 +17,10 @@ export default class StickyNavigation extends Component {
                         const { name, href } = value
                         return(
                             <li key={key}>
-                            <a onClick={this.scroller.bind(this)}
-                                href={`#${href.toLowerCase()}`}><i className="fa fa-circle-o"></i></a>
+                            <a onClick={this.scroller.bind(this, value.name)}
+                                className={`${menu[value.name] == true ? 'active' : ''}`}
+                                href={`#${value.href.toLowerCase()}`}>
+                                <i className="fa fa-circle-o"></i></a>
                             </li>
                         )
                     })}

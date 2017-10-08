@@ -13,10 +13,10 @@ class Services extends Component {
                 </div>
                 <div className="container grid-lg services-content">
                     <div className="columns services-details odd">
-                        <div className="column col-3">
+                        <div className="column col-3 col-sm-12 col-xs-12">
                             <img className="img-responsive" src="/images/icon_consultancy.png" />
                         </div>
-                        <div className="column col-9 content">
+                        <div className="column col-9 col-sm-12 col-xs-12 content">
                             <h2>Consultancy</h2>
                             <p>{`We help you think through the holes and spot rooms for improvement whether that'd be building an app or a site and design
                                 related things. That means we help you on your brain storm process and use the best tools in the business — including some of our
@@ -25,7 +25,7 @@ class Services extends Component {
                         </div>
                     </div>
                     <div className="columns services-details even">
-                        <div className="column col-9 content">
+                        <div className="column col-9 col-sm-12 col-xs-12 content">
                             <h2>App Development</h2>
                             <p>{
                                 `A website or application is a great investment. So how it is built is important.
@@ -34,12 +34,12 @@ class Services extends Component {
                                 We'll work out the budget you have! Nothing more — Nothing less.`}</p>
                                 <a className="btn btn-lg" href="#">VIEW SAMPLES</a>
                         </div>
-                        <div className="column col-3">
+                        <div className="column col-sm-12 col-xs-12 col-3">
                             <img className="btn btn-lg" className="img-responsive" src="/images/icon_development.png" />
                         </div>
                     </div>
                     <div className="columns services-details-list">
-                        <div className="column col-12">
+                        <div className="column col-12 col-sm-12 col-xs-12">
                             <h2 className="text-center">{`We're narrow in focus and deep in experience.`}</h2>
                             <div className="services-list">
                                 <ul>
@@ -53,10 +53,10 @@ class Services extends Component {
                         </div>
                     </div>
                     <div className="columns services-details odd">
-                        <div className="column col-3">
+                        <div className="column col-3 col-sm-12 col-xs-12">
                             <img className="img-responsive" src="/images/icon_graphics.png" />
                         </div>
-                        <div className="column col-9  content">
+                        <div className="column col-9 col-sm-12 col-xs-12 content">
                             <h2>Web / Product Design / Branding</h2>
                             <p>{
                                 `Branding is your client's first impression. It tells the people how serious you are and that you are professional

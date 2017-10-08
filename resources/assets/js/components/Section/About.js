@@ -6,7 +6,7 @@ class About extends Component {
             <div id="about" className="section container grid-xl">
                 <h2 className="text-center">Who We Are</h2>
                 <div className="columns">
-                    <div className="column col-8">
+                    <div className="column col-8 col-sm-12 col-xs-12">
                     <p>
                         {`  A unified team of designers, developers,
                             user experience fanatics that are keen on human-centered design
@@ -21,7 +21,7 @@ class About extends Component {
                              but that's okay, we could still help you and refer some of legit connections we have. So let us know.`}
                     </p>
                     <div className="columns">
-                        <div className="column col-6 col-mr-auto">
+                        <div className="column col-6 col-md-12 col-sm-12 col-xs-12 col-mr-auto">
                             <div className="columns">
                                 <div className="column col-6">
                                     <a href="#" className="btn btn-primary btn-block btn-lg">CONTACT US</a>
@@ -33,7 +33,7 @@ class About extends Component {
                         </div>
                     </div>
                     </div>
-                    <div className="column col-4">
+                    <div className="column col-4 col-sm-12 col-xs-12">
                         <img src="/images/icon_who-we-are.png" />
                     </div>
                 </div>

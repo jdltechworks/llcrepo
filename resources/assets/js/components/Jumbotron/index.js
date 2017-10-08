@@ -9,7 +9,9 @@ class Jumbotron extends Component {
     render() {
         return(
             <div id="jumbotron" className="jumbotron">
-                <img src="/images/bg_header.jpg" />
+                <div className="jumbotron-image">
+                    <img src="/images/bg_header.jpg" />
+                </div>
                 <div className="jumbotron-content text-center">
                     <h1>Great Solutions. <br /> Proud Products.</h1>
                     <br />

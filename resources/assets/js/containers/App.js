@@ -4,6 +4,14 @@ import { connect } from 'react-redux'
 import omit from 'lodash/omit'
 import Navigation from '../components/Navigation'
 
+const screens = {
+    xs: 480,
+    sm: 600,
+    md: 960,
+    xl: 1280,
+    xxl: 1140
+}
+
 class App extends Component {
     componentDidMount() {
     }
@@ -12,9 +20,12 @@ class App extends Component {
         const noform = _.omit(props, 'form')
         return(
             <div className="app-container">
-                <Navigation />
+                <Navigation
+                    menuController={props.actions.Menu}
+                    menu={props.Menu}
+                    screen={screen}/>
                 {Children.map(this.props.children, (child) => {
-                    return cloneElement(child, { ...noform })
+                    return cloneElement(child, { ...noform, screen })
                 })}
             </div>
         )

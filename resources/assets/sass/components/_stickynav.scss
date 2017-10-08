@@ -13,7 +13,7 @@
                 display: block;
                 padding: 5px 0;
                 color: #ccc;
-                &:active, &:focus, &:hover {
+                &:active, &:focus, &:hover, &.active {
                     color: $primary-color;
                 }
             }

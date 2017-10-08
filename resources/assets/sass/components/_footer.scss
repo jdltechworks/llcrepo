@@ -15,10 +15,19 @@
     }
     &-social {
         &-icons {
-
+            text-align: right;
+            @media only screen and (max-width: $size-xl) {
+                text-align: left;
+            }
         }
     }
     .social {
+        &-icons {
+            text-align: right;
+            @media only screen and (max-width: $size-xl) {
+                text-align: left;
+            }
+        }
         li {
             display: inline-block;
             margin: 0 5px;
