@@ -17,7 +17,16 @@
                 padding: 25px 10px;
                 display: block;
                 color: $dark-color;
-                &:hover, &:active, &:focus, &.active {
+            }
+            &:last-child {
+                a {
+                    margin: 15px 0 15px 20px;
+                }
+            }
+        }
+        li:not(:last-child) {
+            a {
+                &:active, &:focus, &.active {
                     color: $primary-color;
                     z-index: 1;
                     &:after {
@@ -28,7 +37,17 @@
                         opacity: 1;
                     }
                 }
-
+                &:active, &:focus, &.active {
+                    color: $primary-color;
+                    z-index: 1;
+                    &:after {
+                        width: 60%;
+                        opacity: 1;
+                        z-index: -10;
+                        animation: fill .2s forwards;
+                        opacity: 1;
+                    }
+                }
                 &:after {
                     transition: all .5s;
                     position: absolute;
@@ -44,11 +63,6 @@
                     height: 3px;
                 }
             }
-            &:last-child {
-                a {
-                    margin: 15px 0 15px 20px;
-                }
-            }
         }
     }
 }
@@ -59,4 +73,66 @@
     width: 100%;
     background: #fff;
     z-index: 1000;
+}
+.navbar {
+    @media only screen and (max-width: 970px) {
+        display: block;
+    }
+    .navbar-section {
+        flex: auto;
+        @media only screen and (max-width: 970px) {
+            display: block;
+        }
+    }
+    &-menu {
+        li {
+            &:last-child {
+                @media only screen and (max-width: $size-lg) {
+                    float: none;
+                }
+                a {
+                    margin: 15px 0 15px 0px;
+                }
+            }
+        }
+        li:not(:last-child) {
+            @media only screen and (max-width: $size-lg) {
+                float: none;
+            }
+            a {
+                @media only screen and (max-width: $size-lg) {
+                    &:after {
+                        transition: all .5s;
+                        position: absolute;
+                        border-radius: 10px;
+                        bottom: 0;
+                        left: 0;
+                        right: auto;
+                        margin: auto;
+                        width: 0%;
+                        content: ".";
+                        color: transparent;
+                        background: $primary-color;
+                        height: 3px;
+                    }
+                    &:active, &:focus, &.active {
+                        color: $primary-color;
+                        z-index: 1;
+                        &:after {
+                            width: 100%;
+                            opacity: 1;
+                            z-index: -10;
+                            animation: fill .5s forwards;
+                            opacity: 1;
+                        }
+                    }
+                }
+                @media only screen and (max-width: 970px) {
+                    font-size: 12px;
+                    padding: 30px 10px;
+                }
+            }
+
+        }
+    }
 }

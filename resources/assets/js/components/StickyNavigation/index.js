@@ -11,7 +11,7 @@ export default class StickyNavigation extends Component {
     render() {
         const { menu } = this.props
         return(
-            <div className="sticky-nav">
+            <div className="sticky-nav hide-md hide-sm hide-lg">
                 <ul>
                     {map(menuSettings, (value, key) => {
                         const { name, href } = value
