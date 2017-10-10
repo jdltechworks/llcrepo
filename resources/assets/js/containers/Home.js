@@ -8,14 +8,14 @@ import StickyNavigation from '../components/StickyNavigation'
 
 export default class Home extends Component {
     render() {
-        const { Menu, actions } = this.props
+        const { Menu, actions, screens } = this.props
         return(
             <div id="home" className="home">
                 <StickyNavigation menuController={actions.Menu} menu={Menu} />
-                <Jumbotron />
-                <About />
-                <Services />
-                <Footer />
+                <Jumbotron screens={screens} />
+                <About screens={screens} />
+                <Services screens={screens} />
+                <Footer screens={screens} />
             </div>
         )
     }

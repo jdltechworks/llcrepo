@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import map from 'lodash/map'
 import jump from 'jump.js'
+import Media from 'react-media'
+import MobileMenu from './MobileMenu'
 
 export const menuSettings = [
     { name: 'HOME', href: 'app', active: true },
@@ -10,6 +12,9 @@ export const menuSettings = [
 ]
 
 export default class Navigation extends Component {
+    state = {
+        isOpen: false
+    }
     scroller(name, e) {
         e.preventDefault()
         jump(e.currentTarget.attributes.href.value)
@@ -26,7 +31,7 @@ export default class Navigation extends Component {
         const { setActive, resetMenu } = menuController
 
         map(menuSettings, (value, key) => {
-            const yOffset = document.getElementById(value.href).offsetTop - 150
+            const yOffset = document.getElementById(value.href).offsetTop - 300
             if(yOffset <= yCoordinate) {
                 setActive(value.name)
             } else if(yOffset > yCoordinate) {
@@ -35,9 +40,14 @@ export default class Navigation extends Component {
         })
 
     }
+    toggle(e) {
+        e.preventDefault()
+        this.setState({isOpen: !this.state.isOpen})
+    }
     render() {
-        const { menu } = this.props
-
+        const { isOpen } = this.state
+        const { menu, screens } = this.props
+        const { toggle } = this
         return(
             <div className="navigation">
                 <div className="container grid-xl">
@@ -46,24 +56,37 @@ export default class Navigation extends Component {
                         <a href="#" className="navbar-brand mr-2">
                             <img className="img-responsive" src="/images/logo.png" />
                         </a>
+                        <a href="#" onClick={toggle.bind(this)} className="show-sm btn btn-lg ml-auto">
+                            <i className="icon icon-menu"></i>
+                        </a>
                       </section>
-                      <section className="navbar-section">
-                          <ul className="navbar-menu">
-                              {map(menuSettings, (value, key) =>
-                                  <li key={key}  className={`navbar-menu-item`}>
-                                    <a onClick={this.scroller.bind(this, value.name)}
-                                        className={`${menu[value.name] == true ? 'active' : ''}`}
-                                        href={`#${value.href.toLowerCase()}`}>
-                                        {value.name.replace(/_/g, ' ')}
-                                    </a>
-                                  </li>
-                              )}
-                              <li className="navbar-menu-item">
-                                <a className="btn btn-primary btn-lg" href="#">SCHEDULE A MEETING</a>
-                              </li>
-                          </ul>
 
-                      </section>
+                      <Media query={{ maxWidth: screens.sm }}>
+                          {matches => matches ? (
+                              <MobileMenu
+                                isOpen={isOpen}
+                                menu={menu}
+                                scroller={this.scroller}
+                                menuSettings={menuSettings}/>
+                          ) : (
+                              <section className="navbar-section">
+                              <ul className="navbar-menu">
+                                  {map(menuSettings, (value, key) =>
+                                      <li key={key}  className={`navbar-menu-item`}>
+                                        <a onClick={this.scroller.bind(this, value.name)}
+                                            className={`${menu[value.name] == true ? 'active' : ''}`}
+                                            href={`#${value.href.toLowerCase()}`}>
+                                            {value.name.replace(/_/g, ' ')}
+                                        </a>
+                                      </li>
+                                  )}
+                                  <li className="navbar-menu-item">
+                                    <a className="btn btn-primary btn-lg" href="#">SCHEDULE A MEETING</a>
+                                  </li>
+                              </ul>
+                              </section>
+                          )}
+                      </Media>
                     </header>
                 </div>
             </div>

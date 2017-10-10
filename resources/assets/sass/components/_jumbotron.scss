@@ -41,5 +41,11 @@
                 }
             }
         }
+        @media only screen and (max-width: $size-md) {
+            h1 {
+                font-size: 35px;
+            }
+            margin: auto 0 auto;
+        }
     }
 }

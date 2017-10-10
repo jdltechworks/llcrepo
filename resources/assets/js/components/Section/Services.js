@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import Media from 'react-media'
 
 class Services extends Component {
     render() {
+        const { screens } = this.props
         return(
             <div id="services" className="services section container">
                 <div className="services-icon">
@@ -24,20 +26,39 @@ class Services extends Component {
                             <a className="btn btn-lg"  href="#">SCHEDULE A MEETING</a>
                         </div>
                     </div>
-                    <div className="columns services-details even">
-                        <div className="column col-9 col-sm-12 col-xs-12 content">
-                            <h2>App Development</h2>
-                            <p>{
-                                `A website or application is a great investment. So how it is built is important.
-                                Every website should have performance goals. We will work with you to identify your
-                                qualitative and quantitative goals, then design and build technology to deliver on those goals.
-                                We'll work out the budget you have! Nothing more — Nothing less.`}</p>
-                                <a className="btn btn-lg" href="#">VIEW SAMPLES</a>
-                        </div>
-                        <div className="column col-sm-12 col-xs-12 col-3">
-                            <img className="btn btn-lg" className="img-responsive" src="/images/icon_development.png" />
-                        </div>
-                    </div>
+                    <Media query={{ maxWidth: screens.md }}>
+                        {matches => matches ? (
+                            <div className="columns services-details even">
+                                <div className="column col-sm-12 col-xs-12 col-3">
+                                    <img style={{ display: 'block', margin: 'auto' }} src="/images/icon_development.png" />
+                                </div>
+                                <div className="column col-9 col-md-12 col-sm-12 col-xs-12">
+                                    <h2 className="text-center">App Development</h2>
+                                    <p>{
+                                        `A website or application is a great investment. So how it is built is important.
+                                        Every website should have performance goals. We will work with you to identify your
+                                        qualitative and quantitative goals, then design and build technology to deliver on those goals.
+                                        We'll work out the budget you have! Nothing more — Nothing less.`}</p>
+                                        <a className="btn btn-lg" href="#">VIEW SAMPLES</a>
+                                </div>
+                            </div>
+                            ) : (
+                            <div className="columns services-details even">
+                                <div className="column col-9 col-sm-12 col-xs-12 content">
+                                    <h2>App Development</h2>
+                                    <p>{
+                                        `A website or application is a great investment. So how it is built is important.
+                                        Every website should have performance goals. We will work with you to identify your
+                                        qualitative and quantitative goals, then design and build technology to deliver on those goals.
+                                        We'll work out the budget you have! Nothing more — Nothing less.`}</p>
+                                        <a className="btn btn-lg" href="#">VIEW SAMPLES</a>
+                                </div>
+                                <div className="column col-sm-12 col-xs-12 col-3">
+                                    <img className="btn btn-lg" className="img-responsive" src="/images/icon_development.png" />
+                                </div>
+                            </div>
+                        )}
+                    </Media>
                     <div className="columns services-details-list">
                         <div className="column col-12 col-sm-12 col-xs-12">
                             <h2 className="text-center">{`We're narrow in focus and deep in experience.`}</h2>

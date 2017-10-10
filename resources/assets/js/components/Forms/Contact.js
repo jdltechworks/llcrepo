@@ -25,10 +25,10 @@ class ContactForm extends Component {
             <form onSubmit={handleSubmit((props) => {this.submitForm(props)})}>
                 <section className="container grid-lg contact-form">
                     <div className="columns contact-form-fields">
-                        <div className="column col-6 col-sm-12 col-xs-12 mb-2">
+                        <div className="column col-6 col-md-12 col-sm-12 col-xs-12 mb-2">
                             {map(primary, renderField.bind(this))}
                         </div>
-                        <div className="column col-6 col-sm-12 col-xs-12">
+                        <div className="column col-6 col-md-12 col-sm-12 col-xs-12">
                             {map(secondary, renderField.bind(this))}
                         </div>
                     </div>
@@ -36,7 +36,7 @@ class ContactForm extends Component {
                         <div className="column col-6 col-sm-12 col-xs-12">
 
                         </div>
-                        <div className="column col-6 col-md-6 col-sm-12 col-xs-12">
+                        <div className="column col-6 col-md-12 col-sm-12 col-xs-12">
                             <div className="columns">
                                 <div className="column col-6 col-md-12 col-sm-12 col-xs-12">
                                     <button className="btn btn-primary btn-block btn-lg mb-2">SEND MESSAGE</button>

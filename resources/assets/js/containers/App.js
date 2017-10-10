@@ -23,9 +23,9 @@ class App extends Component {
                 <Navigation
                     menuController={props.actions.Menu}
                     menu={props.Menu}
-                    screen={screen}/>
+                    screens={screens}/>
                 {Children.map(this.props.children, (child) => {
-                    return cloneElement(child, { ...noform, screen })
+                    return cloneElement(child, { ...noform, screens })
                 })}
             </div>
         )
