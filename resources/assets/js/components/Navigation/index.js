@@ -52,16 +52,16 @@ export default class Navigation extends Component {
             <div className="navigation">
                 <div className="container grid-xl">
                     <header className="navbar">
-                      <section className="navbar-section">
+                      <section className="navbar-section brand-section">
                         <a href="#" className="navbar-brand mr-2">
                             <img className="img-responsive" src="/images/logo.png" />
                         </a>
-                        <a href="#" onClick={toggle.bind(this)} className="show-sm btn btn-lg ml-auto">
+                        <a href="#" onClick={toggle.bind(this)} className="show-md hamburger btn btn-lg ml-auto">
                             <i className="icon icon-menu"></i>
                         </a>
                       </section>
 
-                      <Media query={{ maxWidth: screens.sm }}>
+                      <Media query={{ maxWidth: screens.md }}>
                           {matches => matches ? (
                               <MobileMenu
                                 isOpen={isOpen}

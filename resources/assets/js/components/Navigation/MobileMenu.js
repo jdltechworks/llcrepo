@@ -15,9 +15,9 @@ const MobileMenu = ({isOpen, menu, menuSettings, scroller}) => {
             transitionEnterTimeout={600}
             transitionAppearTimeout={600}
             transitionLeaveTimeout={400}
-            transitionAppear={true}>
+            transitionAppear={false}>
             {isOpen ?
-                <section className="navbar-section">
+                <section className="navbar-section mobile-menu">
                     <ul className="navbar-menu">
                         {map(menuSettings, (value, key) =>
                             <li key={key}  className={`navbar-menu-item`}>

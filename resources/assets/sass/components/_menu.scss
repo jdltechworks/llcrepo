@@ -73,6 +73,7 @@
     width: 100%;
     background: #fff;
     z-index: 1000;
+    height: 70px;
 }
 .navbar {
     @media only screen and (max-width: 970px) {
@@ -82,6 +83,52 @@
         flex: auto;
         @media only screen and (max-width: 970px) {
             display: block;
+        }
+    }
+    .brand-section {
+
+        @media only screen and (max-width: $size-md) {
+            height: 70px;
+            padding: 2% 3%;
+            a.navbar-brand {
+                float: left;
+                margin: 0;
+            }
+            a.hamburger {
+                float: right;
+            }
+            position: relative;
+            margin-left: -10px;
+            margin-right: -10px;
+            z-index: 999;
+            background: #fff;
+        }
+        @media only screen and (max-width: $size-xs) {
+            padding: 2% 4%;
+            a.navbar-brand {
+                img {
+                    width: 70%;
+                }
+                padding: 12px 0;
+            }
+            a.hamburger {
+                margin: 10px 0;
+                font-size: 0.8rem;
+                height: auto;
+                padding: 5px 8px;
+            }
+        }
+    }
+    .mobile-menu {
+        background: #fff;
+        z-index: 888;
+        margin-left: -10px;
+        margin-right: -10px;
+        position: relative;
+        ul {
+            li:last-child {
+                padding-bottom: 3%;
+            }
         }
     }
     &-menu {
@@ -137,39 +184,29 @@
     }
 }
 
-.mobilenav-enter, .mobilenav-appear {
-	opacity: 0;
-	animation: slideDown 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+.mobilenav-enter {
+	animation: slideDown 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .mobilenav-leave {
-	animation: slideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-	opacity: 1.0;
+	animation: slideUp 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-.mobilenav-appear {
-	opacity: 0;
-	animation: slideDown 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
 
 @keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -100px, 0);
+  from {
+    transform: translate3d(0, -300px, 0);
   }
-  100% {
-    opacity: 1;
+  to {
     transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes slideUp {
-  0% {
-    opacity: 1;
+  from {
     transform: translate3d(0, 0, 0);
   }
-  100% {
-    opacity: 0;
-    transform: translate3d(0, -100px, 0);
+  to {
+    transform: translate3d(0, -700px, 0);
   }
 }
