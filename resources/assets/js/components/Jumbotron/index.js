@@ -15,7 +15,7 @@ class Jumbotron extends Component {
                 <div className="jumbotron-content text-center">
                     <h1>Great Solutions. <br /> Proud Products.</h1>
                     <br />
-                    <p>Nam purus augue, bibendum quis magna id, sollicitudin prottitor ex.</p>
+                    <p>{`An extension of your team. Just a virtual version.`}</p>
                     <a href="#contact" onClick={this.scroller.bind(this)} className="btn btn-lg btn-transparent">
                         <span>CONTACT US KNOW <i className="icon icon-arrow-right" /></span>
                     </a>

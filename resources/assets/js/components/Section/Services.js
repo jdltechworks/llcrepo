@@ -21,9 +21,9 @@ class Services extends Component {
                         <div className="column col-9 col-md-12 col-sm-12 col-xs-12 content">
                             <h2>Consultancy</h2>
                             <div className="section-body">
-                                <p>{`We help you think through the holes and spot rooms for improvement whether that'd be building an app or a site and design
-                                    related things. That means we help you on your brain storm process and use the best tools in the business — including some of our
-                                    own proprietary softwares — to ensure the business gets secured and protected.`}</p>
+                                <p>{`We help you think through the holes and spot rooms for improvement whether that'd be building an app or
+                                    a site and design related things. That means we help you on your brain storm process and use the best tools in the business —
+                                    including some of our own proprietary softwares. To ensure the business gets the updated cores, protection and precautionary ..`}</p>
                                 <a className="btn btn-lg"  href="#">SCHEDULE A MEETING</a>
                             </div>
                         </div>
