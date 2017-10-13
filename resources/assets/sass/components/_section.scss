@@ -42,5 +42,19 @@
             margin: 80px auto;
         }
     }
+    &-gap {
+        margin: 40px 0 30px 0;
+        @media only screen and (max-width: $size-md) {
+            p {
+                line-height: 2.5;
+                font-size: 14px;
+                letter-spacing: 1px;
+                padding-left: 14px;
+                &:last-child {
+                    margin-bottom: 40px;
+                }
+            }
+        }
 
+    }
 }
