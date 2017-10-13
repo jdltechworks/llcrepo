@@ -21,7 +21,7 @@ const MobileMenu = ({isOpen, menu, menuSettings, scroller}) => {
                     <ul className="navbar-menu">
                         {map(menuSettings, (value, key) =>
                             <li key={key}  className={`navbar-menu-item`}>
-                              <a onClick={scroller.bind(this, value.name)}
+                              <a onClick={scroller.bind(this, value.href)}
                                   className={`${menu[value.name] == true ? 'active' : ''}`}
                                   href={`#${value.href.toLowerCase()}`}>
                                   {value.name.replace(/_/g, ' ')}

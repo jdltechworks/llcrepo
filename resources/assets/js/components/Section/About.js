@@ -14,7 +14,7 @@ class About extends Component {
                             <div className="column col-12 col-sm-12 col-xs-12">
                                 <img style={{ display: 'block', margin: 'auto' }} src="/images/icon_who-we-are.png" />
                             </div>
-                            <div className="column col-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                            <div className="column col-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 section-gap">
                                 <p>
                                     {`  A unified team of designers, developers,
                                         user experience fanatics that are keen on human-centered design

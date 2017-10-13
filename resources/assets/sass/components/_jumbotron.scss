@@ -8,7 +8,10 @@
             margin: auto;
         }
     }
-
+    @media only screen and (max-width: $size-md) {
+        overflow: hidden;
+        height: 35em;
+    }
     &-content {
         h1 {
             font-size: 60px;

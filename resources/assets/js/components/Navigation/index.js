@@ -15,9 +15,14 @@ export default class Navigation extends Component {
     state = {
         isOpen: false
     }
-    scroller(name, e) {
+    scroller(href, e) {
         e.preventDefault()
-        jump(e.currentTarget.attributes.href.value)
+        jump(document.getElementById(href))
+    }
+    mobileScroller(href, e) {
+        e.preventDefault()
+        jump(document.getElementById(href))
+        this.setState({ isOpen: false })
     }
     componentDidMount() {
         const { menuController } = this.props
@@ -66,24 +71,24 @@ export default class Navigation extends Component {
                               <MobileMenu
                                 isOpen={isOpen}
                                 menu={menu}
-                                scroller={this.scroller}
+                                scroller={this.mobileScroller.bind(this)}
                                 menuSettings={menuSettings}/>
                           ) : (
                               <section className="navbar-section">
-                              <ul className="navbar-menu">
-                                  {map(menuSettings, (value, key) =>
-                                      <li key={key}  className={`navbar-menu-item`}>
-                                        <a onClick={this.scroller.bind(this, value.name)}
-                                            className={`${menu[value.name] == true ? 'active' : ''}`}
-                                            href={`#${value.href.toLowerCase()}`}>
-                                            {value.name.replace(/_/g, ' ')}
-                                        </a>
+                                  <ul className="navbar-menu">
+                                      {map(menuSettings, (value, key) =>
+                                          <li key={key}  className={`navbar-menu-item`}>
+                                            <a onClick={this.scroller.bind(this, value.href)}
+                                                className={`${menu[value.name] == true ? 'active' : ''}`}
+                                                href={`#${value.href.toLowerCase()}`}>
+                                                {value.name.replace(/_/g, ' ')}
+                                            </a>
+                                          </li>
+                                      )}
+                                      <li className="navbar-menu-item">
+                                        <a className="btn btn-primary btn-lg" href="#">SCHEDULE A MEETING</a>
                                       </li>
-                                  )}
-                                  <li className="navbar-menu-item">
-                                    <a className="btn btn-primary btn-lg" href="#">SCHEDULE A MEETING</a>
-                                  </li>
-                              </ul>
+                                  </ul>
                               </section>
                           )}
                       </Media>
