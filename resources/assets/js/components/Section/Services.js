@@ -1,19 +1,29 @@
 import React, { Component } from 'react'
 import Media from 'react-media'
+import jump from 'jump.js'
 
 class Services extends Component {
+    handleClick(cog, e) {
+        e.preventDefault()
+        if(cog) {
+            jump(document.getElementById('services-main'))
+            return
+        }
+        jump(document.getElementById('contact'))
+    }
+
     render() {
         const { screens } = this.props
         return(
             <div id="services" className="services section container">
-                <div className="services-icon">
+                <div onClick={this.handleClick.bind(this, true)} style={{cursor: 'pointer'}} className="services-icon">
                     <i className="fa fa-cog"></i>
                 </div>
                 <h2 className="text-center">Services</h2>
                 <div className="container grid-lg">
                     <img src="/images/mockup.png" className="img-responsive" />
                 </div>
-                <div className="container grid-lg services-content">
+                <div id="services-main" className="container grid-lg services-content">
                     <div className="columns services-details odd">
                         <div className="column col-3 col-md-12 col-sm-12 col-xs-12">
                             <img className="img-responsive" src="/images/icon_consultancy.png" />
@@ -24,7 +34,7 @@ class Services extends Component {
                                 <p>{`We help you think through the holes and spot rooms for improvement whether that'd be building an app or
                                     a site and design related things. That means we help you on your brain storm process and use the best tools in the business —
                                     including some of our own proprietary softwares. To ensure the business gets the updated cores, protection and precautionary ..`}</p>
-                                <a className="btn btn-lg"  href="#">SCHEDULE A MEETING</a>
+                                <a className="btn btn-lg" onClick={this.handleClick.bind(this)} href="#">SCHEDULE A MEETING</a>
                             </div>
                         </div>
                     </div>

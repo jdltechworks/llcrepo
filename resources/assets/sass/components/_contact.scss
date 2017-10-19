@@ -17,4 +17,11 @@
             }
         }
     }
+    .btn-transparent {
+        background: none;
+        &:hover, &:active, &:focus {
+            background: $primary-color;
+            color: #fff;
+        }
+    }
 }

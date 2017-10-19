@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import jump from 'jump.js'
 
 class Jumbotron extends Component {
-    scroller(e) {
+    scroller(target, e) {
         e.preventDefault()
-        jump(e.currentTarget.attributes.href.value)
+        jump(document.getElementById(target))
     }
     render() {
         return(
@@ -20,6 +20,7 @@ class Jumbotron extends Component {
                         <span>CONTACT US KNOW <i className="icon icon-arrow-right" /></span>
                     </a>
                 </div>
+                <a className="jumbotron-arrow" href="#" onClick={this.scroller.bind(this, 'about')}><img src="/images/icon_arrow-down.png" /></a>
             </div>
         )
     }

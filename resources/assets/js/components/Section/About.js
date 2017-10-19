@@ -1,7 +1,16 @@
 import React, { Component } from 'react'
 import Media from 'react-media'
+import jump from 'jump.js'
 
 class About extends Component {
+    handleClick(cog, e) {
+        e.preventDefault()
+        if(cog) {
+            jump(document.getElementById('services'))
+            return
+        }
+        jump(document.getElementById('contact'))
+    }
     render() {
         const { screens } = this.props
         return(
@@ -12,7 +21,8 @@ class About extends Component {
                     {matches => matches ? (
                         <div className="columns">
                             <div className="column col-12 col-sm-12 col-xs-12">
-                                <img style={{ display: 'block', margin: 'auto' }} src="/images/icon_who-we-are.png" />
+                                <img style={{ display: 'block', margin: 'auto' }}
+                                    src="/images/icon_who-we-are.png" />
                             </div>
                             <div className="column col-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 section-gap">
                                 <p>
@@ -32,10 +42,10 @@ class About extends Component {
                                     <div className="column col-6 col-lg-8 col-md-12 col-sm-12 col-xs-12 col-mr-auto">
                                         <div className="columns">
                                             <div className="column col-6">
-                                                <a href="#" className="btn btn-primary btn-block btn-lg">CONTACT US</a>
+                                                <a href="#" onClick={this.handleClick.bind(this, false)} className="btn btn-primary btn-block btn-lg">CONTACT US</a>
                                             </div>
                                             <div className="column col-6">
-                                                <a href="$" className="btn btn-block btn-lg">LEARN MORE</a>
+                                                <a href="#" onClick={this.handleClick.bind(this, false)} className="btn btn-block btn-lg">LEARN MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -62,10 +72,10 @@ class About extends Component {
                                     <div className="column col-6 col-lg-8 col-md-12 col-sm-12 col-xs-12 col-mr-auto">
                                         <div className="columns">
                                             <div className="column col-6">
-                                                <a href="#" className="btn btn-primary btn-block btn-lg">CONTACT US</a>
+                                                <a href="#" onClick={this.handleClick.bind(this, false)} className="btn btn-primary btn-block btn-lg">CONTACT US</a>
                                             </div>
                                             <div className="column col-6">
-                                                <a href="$" className="btn btn-block btn-lg">LEARN MORE</a>
+                                                <a href="#" onClick={this.handleClick.bind(this, false)} className="btn btn-block btn-lg">LEARN MORE</a>
                                             </div>
                                         </div>
                                     </div>

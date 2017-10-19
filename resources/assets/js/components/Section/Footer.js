@@ -13,7 +13,7 @@ class Footer extends Component {
     render() {
         return(
             <footer className="footer">
-                <DecoratedForm />
+                <DecoratedForm {...this.props} />
                 <div className="container grid-lg">
                     <div className="columns">
                         <div className="copyright column col-3 col-xl-12  col-lg-12 col-md-12 col-sm-12 col-xs-12 col-mr-auto">

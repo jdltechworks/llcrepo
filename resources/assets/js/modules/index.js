@@ -10,14 +10,15 @@ import { reducer as form } from 'redux-form'
  */
 
 import * as Menu from './Menu'
-
+import * as Contact from './Contact'
 /**
  * You can register your modules here
  * @type {Object}
  */
 const modules = {
     Auth: require('./Auth'),
-    Menu
+    Menu,
+    Contact
 }
 
 const initialActions = {
