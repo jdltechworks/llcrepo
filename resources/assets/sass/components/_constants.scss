@@ -13,7 +13,10 @@ a {
 }
 
 footer {
-    background: url("/images/bg_contact-us.jpg") no-repeat scroll center top #282826;
+    background: url("/images/bg_contact-us.jpg") no-repeat scroll center bottom #F7F7F7;
+    @media only screen and (min-width: $size-xl) {
+        background-size: 100%;
+    }
 }
 
 /**

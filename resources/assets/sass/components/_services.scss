@@ -6,7 +6,7 @@
         top: -2%;
         background: #f7f7f7;
         width: 100%;
-        height: 100px;
+        height: 200px;
         position: absolute;
         -ms-transform: skewY(2deg);
         -webkit-transform: skewY(2deg);
@@ -75,7 +75,7 @@
             margin: 0;
             @media only screen and (max-width: $size-md) {
                 margin: 25px 0 15px 0;
-                text-align: center; 
+                text-align: center;
             }
         }
 
