@@ -22,9 +22,11 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
     public function showLoginForm() {
         return view('index');
     }
+
     public function login(Request $request)
     {
         if (Auth::attempt($request->all())) {
@@ -34,6 +36,7 @@ class LoginController extends Controller
             return response([ 'error' => 'Invalid login credentials'], 401);
         }
     }
+    
     public function logout() {
         Auth::logout();
         return response([ 'session' => '']);

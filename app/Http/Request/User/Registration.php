@@ -40,6 +40,6 @@ class Registration extends FormRequest
         $user->confirmation_code = $code;
         $user->save();
         auth()->login($user);
-        Mail::to($user)->send(new Verification($user));
+        Mail::to($user)->send(new Verification($user));
     }
 }

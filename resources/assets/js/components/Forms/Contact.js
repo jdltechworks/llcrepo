@@ -14,8 +14,9 @@ class ContactForm extends Component {
     componentDidMount() {
     }
     submitForm(values) {
-      const { actions } = this.props
-      actions.sendMail(values)
+      const { actions, _token } = this.props
+      
+      actions.sendMail({...values, _token})
     }
     dismiss(e) {
         e.preventDefault()

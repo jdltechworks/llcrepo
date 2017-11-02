@@ -14,6 +14,7 @@ import ClientProvider from './provider/Client'
     if (d.head) d.head.appendChild(s);
 })(document, window, 'Chatra');
 
+
 window.getInitialProps = (props, target) => {
-  render(<ClientProvider {...props} />,  document.getElementById(target))
+    render(<ClientProvider {...props} />,  document.getElementById(target))
 }

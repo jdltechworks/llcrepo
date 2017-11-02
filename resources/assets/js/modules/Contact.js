@@ -19,6 +19,10 @@ export const initialState = {
 
 export const actions = {
     sendMail(values) {
+        const headers = new Headers({
+            'X-CSRF-TOKEN': values._token
+        })
+
         return (dispatch, getState) => {
             const body = new FormData()
             dispatch({ type: types.IS_SENDING })
@@ -28,6 +32,7 @@ export const actions = {
 
             return fetch('/contact', {
                 method: 'POST',
+                headers,
                 credentials: 'same-origin',
                 body
             }).then((res) => res.json())
