@@ -21,7 +21,6 @@ class MessageReceived extends Mailable
     public function __construct(Request $request)
     {
         $this->msg = $request->all();
-        $this->sender = $request->input('email');
     }
 
     /**
@@ -32,6 +31,6 @@ class MessageReceived extends Mailable
     public function build()
     {
 
-        return $this->from($this->sender)->markdown('email.message')->with($this->msg);
+        return $this->markdown('email.message')->with($this->msg);
     }
 }
