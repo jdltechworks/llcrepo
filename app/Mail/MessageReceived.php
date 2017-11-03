@@ -30,6 +30,6 @@ class MessageReceived extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.message')->with($this->msg);
+        return $this->from($this->msg->email)->markdown('email.message')->with($this->msg);
     }
 }
