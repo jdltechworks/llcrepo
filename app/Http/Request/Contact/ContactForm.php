@@ -36,8 +36,9 @@ class ContactForm extends FormRequest
     public function persist()
     {
         $messageDetails = $this;
-        \Mail::to('jdltech@llcsolutions.org')->send(new MessageReceived($messageDetails));
+        $support = env('MAIL_FROM_ADDRESS', 'support@llcsolutions.org');
+        \Mail::to($support)->send(new MessageReceived($messageDetails));
 
-        return response(['request' => 'gfee']);
+        return true;
     }
 }

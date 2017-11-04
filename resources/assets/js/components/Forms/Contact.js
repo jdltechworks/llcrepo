@@ -15,7 +15,7 @@ class ContactForm extends Component {
     }
     submitForm(values) {
       const { actions, _token } = this.props
-      
+
       actions.sendMail({...values, _token})
     }
     dismiss(e) {
@@ -25,18 +25,18 @@ class ContactForm extends Component {
     }
     render() {
         const { dismiss } = this
-        let { handleSubmit, contact, } = this.props
-        const { isError, isSending, message } = contact
+        let { handleSubmit, contact, pristine, submitting } = this.props
+        const { isError, isSending, message, toast } = contact
         return (
             <div id="contact" className={`section container contact ${isSending ? 'sending': ''}`}>
                 <h2 className="text-center">CONTACT US</h2>
                 <form onSubmit={handleSubmit((props) => {this.submitForm(props)})}>
                     <section className="container grid-lg contact-form">
-                        {isError ?
+                        {toast ?
                             <div className="container grid-lg mb-2">
                                 <div className="columns">
                                     <div className="col-12">
-                                        <div className="toast toast-error">
+                                        <div className={`toast ${isError ? 'toast-error': 'toast-success'}`}>
                                             <button className="btn btn-clear float-right" onClick={dismiss.bind(this)}></button>
                                             {message}
                                         </div>
@@ -58,7 +58,9 @@ class ContactForm extends Component {
                             <div className="column col-6 col-md-12 col-sm-12 col-xs-12">
                                 <div className="columns">
                                     <div className="column col-6 col-md-12 col-sm-12 col-xs-12">
-                                        <button className="btn btn-block btn-transparent btn-lg mb-2">SEND MESSAGE</button>
+                                        <button
+                                            disabled={pristine || submitting}
+                                            className="btn btn-block btn-transparent btn-lg mb-2">SEND MESSAGE</button>
                                     </div>
                                     <div className="column col-6 col-md-12 col-sm-12 col-xs-12">
                                         <button className="btn btn-primary btn-block btn-lg mb-2">SCHEDULE A MEETING</button>

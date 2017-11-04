@@ -36,7 +36,11 @@ class ContactController extends Controller
      */
     public function store(ContactForm $form)
     {
-        $form->persist();
+        $test = $form->persist();
+        return response([
+            'message' =>
+            'Message sent we will get back to you as soon as we receive your message'],
+        200);
     }
 
     /**

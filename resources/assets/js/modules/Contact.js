@@ -14,7 +14,8 @@ export const types = createConstants('contact')(
 export const initialState = {
     isSending: false,
     isError: false,
-    message: ''
+    message: '',
+    toast: false
 }
 
 export const actions = {
@@ -36,9 +37,14 @@ export const actions = {
                 credentials: 'same-origin',
                 body
             }).then((res) => res.json())
-            .then((message) => {
-                console.log(message)
-                dispatch({ type: types.SENT, message })
+            .then(({message}) => {
+
+                dispatch({
+                    type: types.SENT, message,
+                    success: true,
+                    toast: true
+                })
+
             }).catch(err => dispatch({ type: types.ERROR, err}))
 
         }
@@ -58,24 +64,28 @@ export const reducer = createReducer({
             isSending: true
         }
     },
-    [types.SEND](state, { message }) {
+    [types.SENT](state, { message, success, toast }) {
         return {
             ...state,
             isSending: false,
-            message
+            message,
+            success,
+            toast
         }
     },
     [types.DISMISS](state, { isError }) {
         return {
             ...state,
-            isError
+            isError,
+            toast: false
         }
     },
     [types.ERROR](state, { err }) {
         return {
             isSending: false,
             message: 'Failed to send message',
-            isError: true
+            isError: true,
+            toase: true
         }
     }
 })
