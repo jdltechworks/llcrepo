@@ -40,11 +40,11 @@ class About extends Component {
                                 </p>
                                 <div className="columns">
                                     <div className="column col-6 col-lg-8 col-md-12 col-sm-12 col-xs-12 col-mr-auto">
-                                        <div className="columns">
-                                            <div className="column col-6">
+                                        <div className="columns btn-grp">
+                                            <div className="column col-6 col-sm-12">
                                                 <a href="#" onClick={this.handleClick.bind(this, false)} className="btn btn-primary btn-block btn-lg">CONTACT US</a>
                                             </div>
-                                            <div className="column col-6">
+                                            <div className="column col-6 col-sm-12 mt-2">
                                                 <a href="#" onClick={this.handleClick.bind(this, false)} className="btn btn-block btn-lg">LEARN MORE</a>
                                             </div>
                                         </div>

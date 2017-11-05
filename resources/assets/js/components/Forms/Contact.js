@@ -8,6 +8,7 @@ const primary = pick(CONTACT, ['name', 'email'])
 
 const secondary = pick(CONTACT, ['message'])
 
+const captcha = pick(CONTACT, ['captcha'])
 
 
 class ContactForm extends Component {
@@ -15,7 +16,6 @@ class ContactForm extends Component {
     }
     submitForm(values) {
       const { actions, _token } = this.props
-
       actions.sendMail({...values, _token})
     }
     dismiss(e) {
@@ -52,8 +52,8 @@ class ContactForm extends Component {
                             </div>
                         </div>
                         <div className="columns">
-                            <div className="column col-6 col-sm-12 col-xs-12">
-
+                            <div className="column col-6 col-sm-12 col-xs-12  mb-2">
+                                {map(captcha, renderField.bind(this))}
                             </div>
                             <div className="column col-6 col-md-12 col-sm-12 col-xs-12">
                                 <div className="columns">

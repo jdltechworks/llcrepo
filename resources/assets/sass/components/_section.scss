@@ -4,10 +4,16 @@
     display: table;
     padding-bottom: 10%;
     @media only screen and (max-width: $size-md) {
-        padding-bottom: 15em;
+        padding: 0 0 15em;
     }
     &-body {
         padding: 0 0 25px 0;
+        @media only screen and (max-width: $size-sm) {
+            padding: 0 15px 25px;
+            .btn {
+                display: block;
+            }
+        }
     }
     > h2{
         text-transform: uppercase;
@@ -57,4 +63,14 @@
         }
 
     }
+    @media only screen and (max-width: $size-sm) {
+        p {
+            padding: 10px;
+        }
+        .btn-grp {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
 }

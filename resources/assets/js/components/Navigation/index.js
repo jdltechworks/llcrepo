@@ -36,7 +36,7 @@ export default class Navigation extends Component {
         const { setActive, resetMenu } = menuController
 
         map(menuSettings, (value, key) => {
-            const yOffset = document.getElementById(value.href).offsetTop - 600
+            const yOffset = document.getElementById(value.href).offsetTop - 50
             if(yOffset <= yCoordinate) {
                 setActive(value.name)
             } else if(yOffset > yCoordinate) {

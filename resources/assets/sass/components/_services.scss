@@ -25,6 +25,13 @@
             background: #f7f7f7;
         }
     }
+    &.container {
+        @media only screen and (max-width: $size-sm) {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 3em;
+        }
+    }
     &-icon {
         &:before {
             content: "";
@@ -59,6 +66,10 @@
     &-content {
         background: #fff;
         padding: 8% 2.5% 5%;
+        @media only screen and (max-width: $size-sm) {
+            margin-top: 25%;
+            padding-top: 30%;
+        }
     }
     &-details {
         margin-bottom: 7em;
@@ -85,6 +96,7 @@
         }
         .btn {
             padding: 10px 35px;
+            letter-spacing: 1.5px;
         }
         &.odd {
             .content {

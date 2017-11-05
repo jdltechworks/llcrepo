@@ -47,11 +47,17 @@
                 }
             }
         }
+
         @media only screen and (max-width: $size-md) {
             h1 {
                 font-size: 35px;
             }
             margin: auto 0 auto;
+        }
+
+        @media only screen and (max-width: $size-sm) {
+            margin: 30% 0 auto;
+            padding: 0 1px;
         }
     }
     &-arrow {

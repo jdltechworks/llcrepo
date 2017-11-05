@@ -4,6 +4,7 @@
     "react"
   ],
   "plugins": [
+    "transform-inline-environment-variables",
     "transform-object-rest-spread",
     "transform-class-properties"
   ]

@@ -11,6 +11,7 @@
     },
     "devDependencies": {
         "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-inline-environment-variables": "^0.2.0",
         "babel-plugin-transform-object-rest-spread": "^6.23.0",
         "babel-preset-env": "^1.5.2",
         "babel-preset-react": "^6.24.1",
@@ -39,6 +40,8 @@
     },
     "dependencies": {
         "jump.js": "^1.0.2",
+        "react-async-script": "^0.9.1",
+        "react-google-recaptcha": "^0.9.7",
         "react-media": "^1.6.1"
     }
 }

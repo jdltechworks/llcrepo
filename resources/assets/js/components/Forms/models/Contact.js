@@ -14,5 +14,12 @@ export const CONTACT = {
         type:'textarea',
         label:'Your message *',
         rows: 4
+    },
+    captcha: {
+        tag: 'captcha',
+        type: 'captcha',
+        label: 'captcha',
+        siteKey: process.env.CAPTCHA_KEY,
+        custom: true
     }
 }
